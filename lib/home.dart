@@ -4,6 +4,8 @@ import 'package:court/favorite.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:court/services/user_services.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -69,6 +71,19 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () async {
+              await AuthService().logout();
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/login',
+                (route) => false,
+              );
+            },
+          ),
+        ],
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         automaticallyImplyLeading: false,
