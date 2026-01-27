@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:court/login.dart';
+import 'package:court/register.dart';
 import 'package:court/started.dart';
 
 void main() {
@@ -10,9 +12,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: CourtApp(),
-      debugShowCheckedModeBanner: false, 
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      // DEFAULT PAGE
+      initialRoute: '/login',
+
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/register': (context) => const RegisterScreen(),
+        '/home': (context) => const CourtApp(),
+      },
     );
   }
 }
