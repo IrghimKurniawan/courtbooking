@@ -1,16 +1,22 @@
-# court
+## ⚙️ Installation & Run
 
-A new Flutter project.
+### Prerequisites
+- Flutter SDK (latest stable)
+- Android Studio or VS Code
+- Android Emulator or physical device
+- Git
 
-## Getting Started
+### Installation
+```bash
+git clone https://github.com/IrghimKurniawan/courtbooking.git
+cd courtbooking
+flutter pub get
 
-This project is a starting point for a Flutter application.
+### Running
+flutter run
 
-A few resources to get you started if this is your first Flutter project:
+# Android
+flutter run -d android
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Web (Chrome)
+flutter run -d chrome
